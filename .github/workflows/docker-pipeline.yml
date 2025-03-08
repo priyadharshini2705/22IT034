@@ -24,5 +24,5 @@ jobs:
       - name: Docker Push
         run: docker push priyadharshini27/ml-model-22it034
 
-        
+          
       
