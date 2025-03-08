@@ -1,17 +1,14 @@
-# Use Python base image
+# Use an official Python runtime as a base image
 FROM python:3.9
 
-# Set working directory
+# Set the working directory in the container
 WORKDIR /app
 
-# Copy the API script into the container
-COPY personal-api.py .
+# Copy all files to the container
+COPY . /app
 
-# Install dependencies
-RUN pip install flask
+# Install necessary dependencies
+RUN pip install scikit-learn joblib
 
-# Expose the port Flask runs on
-EXPOSE 5000
-
-# Command to run the API
-CMD ["python", "personal-api.py"]
+# Run the script
+CMD ["python", "ml-model.py"]
