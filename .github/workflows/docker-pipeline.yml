@@ -22,7 +22,7 @@ jobs:
           username: ${{ vars.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Docker Push
-        run: docker push priyadharshini/ml-model-22it034
+        run: docker push priyadharshini27/ml-model-22it034
 
         
       
